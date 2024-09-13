@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Concatination object return i single string</h1>
+    <script>
+        let obj = {
+            name: "Arpi",
+            age: "26",
+            city: "Surat"
+        }
+
+        let str = ""
+        for (let a in obj) {
+            if (obj.hasOwnProperty(a)) {
+                str += obj[a]
+            }
+        }
+        console.log(str);
+
+
+    </script>
+
+</body>
+
+</html>
