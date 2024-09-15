@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>object</h1>
+    <script>
+        // let data=prompt('enter your role')
+        // let obj={
+        //     name:"utsav",
+        //     add:'delhi',
+        //     // isActive:data=="admin"?true:false,
+        //     add:{
+        //         ca:"blr",
+        //         pa:{
+        //             fa:"bihar",
+        //             ma:"delhi",
+        //             sa:{
+        //                 cllz:"jaipur"
+        //             }
+        //         }
+        //     }
+        // }
+
+        //optional chaining
+        // console.log(obj.sal?.history)
+        // let arr=[{name:'utsav',add:{ca:"xyz"}},
+        // {name:"arpita",add:{ca:"abc"}},
+        // {name:"jaydeep"},
+        // {}]
+        // arr.map(data=>console.log(data.add?.ca))
+        // 👉 https://javascript.info/optional-chaining  
+
+        // console.log(obj['name'])
+        // obj.name="vicky"
+        // console.table(obj)
+        // delete obj.name
+
+
+        //object 
+        let obj = {
+            name: 'utsav',
+            add: "delhi"
+        }
+        //  object.keys()
+        console.log(Object.keys(obj)) //array of keys
+        console.log(Object.values(obj)) //array of values
+
+        //  let res={
+        //     token:"abcdefghi",
+        //     sessionId:123,
+        //     expireIn:1234
+        //  }
+        //seal
+        //  let res1=Object.seal(res)
+        //  res1.sessionId=3456   //possible (update)
+        //  res1.active=true      //creating (not possible)
+        //  console.log(res1)
+
+        //freeze
+        //  let res2=Object.freeze(res)
+        //  res2.sessionId=9999999   //not possible (update)
+        //  res2.active=true         //creating (not possible)
+        //  console.log(res2)
+
+        //assign 
+        let res = {
+            token: "abcdefghi",
+            sessionId: 123,
+            expireIn: 1234
+        }
+
+        let res1 = res;   //same address
+        let res2 = Object.assign({}, res)  //new address 
+        console.log(res2 == res)  //false
+
+        //create
+        let Student = {
+            name: "Lisa",
+            age: 24,
+            marks: 78.9,
+            display() {
+                console.log("Name:", this.name);
+            }
+        };
+
+        // create object from Student prototype
+        let std1 = Object.create(Student);
+        console.log(std1)
+        console.log(std1.name)
+        // std1.displayxxxx()
+
+        //👉 https://www.programiz.com/javascript/library/object/create
+
+
+
+
+    </script>
+</body>
+
+</html>

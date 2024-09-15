@@ -1,0 +1,19 @@
+JAVASCRIPT:--------
+1.Single Thread Programning
+2.Dyanamic Programning Langague
+3.conversion and coercion in javascript
+4. Entery leval and Exit leval loop 
+5. Diff between while and do-while loop
+6.== and ===
+7.null and undefind
+8.What is javascript
+9. What is statement and expreasions
+10.object method 
+11. getter and setter
+12.polyfile(call,apply,bind,foreach,map,fillter)
+13.set
+14.optional Chaining
+15.CURD Operation
+16.OOPS -->CLASS Static Method-->key(),seal(),freaze(),value(),assign().
+17.Function
+

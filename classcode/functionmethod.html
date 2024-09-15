@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>function polyfill</h1>
+      <script>
+        // let obj={
+        //     name1:"utsav",
+        //     details(...rest)
+        //     {
+        //         console.log(this.name1)
+        //         console.log(rest)
+        //     }
+        // }
+        // let obj2={
+        //     name1:"vicky"
+        // }
+        // function.html:22 Uncaught TypeError: CreateListFromArrayLike called on non-object
+    //    let x= obj.details.bind(obj2,2,2,3,4,5,4,4,4,4,4)
+    //    x()
+
+
+    // function details()
+    // {
+    //     console.log(`hello my name is ${this.name} and i am form ${this.add}`)
+    // }
+    // let tech1={
+    //     name:'utsav',
+    //     add:'delhi'
+    // }
+    // let tech2={
+    //     name:'vicky',
+    //     add:'odisha'
+    // }
+    //  details.call(tech1)
+
+    //polyfill for call bind and apply
+
+    let obj1={
+        name:"utsav",
+        display()
+        {
+            console.log(`hello my name is ${this.name}`)
+        }
+    }
+    let obj2={
+        name:'vicky'
+    }
+
+    Function.prototype.myapply=function(arg={},par)
+    {
+        if(!Array.isArray(par)) throw new Error('Uncaught TypeError: CreateListFromArrayLike called on non-object')
+        arg.fun=this
+        arg.fun(...par)
+    }
+  obj1.display.myapply(obj2,[2,3,4])
+    //function.html:55 Uncaught TypeError: CreateListFromArrayLike called on non-object
+         //apply    
+//obj1.display.apply(obj2,4444,55)
+
+
+
+
+    // let arr=[1,2,3,4]
+    // Array.prototype.map=function()
+    // {
+    //     console.log('hacked')
+    // }
+    // arr.map((item)=>{
+    //     console.log(item)
+    // })
+    
+    //call
+    // Function.prototype.mycall=function(arg={},...rest)
+    // {
+    //    arg.fun=this;
+    //    arg.fun(...rest)
+        
+    // }
+    // obj1.display.mycall(obj2,2,3,4,5)
+      </script>
+</body>
+</html>

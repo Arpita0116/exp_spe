@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //FUNCTION
+        //ARROW FUNCTION
+        //HOF
+        //CBF
+        //FCF
+        //FUNCTION METHOD(CALL,BIND,APPLY)
+        //FUNCTION CONTEXT(THIS)
+
+        //defi...        //default value
+        function sayMyName(arg1, arg2 = 0)   //formal para.
+        {
+            try {
+                if (arg1 + arg2) {
+                    console.log(arg1 + arg2)
+                }
+                else {
+                    throw new ReferenceError('somthing wrong !')
+                }
+            }
+            catch (err) {
+                console.log(err)
+                console.log('message', err.message)
+                console.log('type', err.name)
+                console.log('stack', err.stack)
+            }
+        }
+        //calling
+        sayMyName(12)     //actual para
+        let obj = new sayMyName()
+        console.log(obj)
+    </script>
+</body>
+
+</html>
